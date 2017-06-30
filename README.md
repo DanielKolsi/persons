@@ -5,9 +5,9 @@ This app lists person data in an HTML table. It's implemented using Javascript a
 framework. JQuery is used for AJAX & manipulating HTML elements. CSS is used for styling.
 
 
-========================
+***************
 installation:
-========================
+***************
 
 After closing / downloading from GitHub. Cd to the main folder.
 Execute the following commands:
@@ -16,9 +16,9 @@ Execute the following commands:
 2) npm start
 3) browse to: http://127.0.0.1/3000
 
-========================
+***************
 Assumptions
-========================
+***************
 As this was a quick asked to be returned the next day, unit & functional tests were
 omitted.
 
