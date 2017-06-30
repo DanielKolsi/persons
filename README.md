@@ -20,7 +20,8 @@ Execute the following commands:
 Assumptions
 ***************
 As this was a quick asked to be returned the next day, unit & functional tests were
-omitted.
+omitted. Also due to the time restrictions, there are some small differencies (e.g. checkbutton color & font
+families) between the sketch and the implementation.
 
 Also, the code contains some 'hard coded' values which could be outsourced to a separate config
 file if there were more time.
