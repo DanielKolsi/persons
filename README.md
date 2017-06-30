@@ -9,7 +9,9 @@ framework. JQuery is used for AJAX & manipulating HTML elements. CSS is used for
 installation:
 ***************
 
-After closing / downloading from GitHub. Cd to the main folder.
+0) git clone https://github.com/DanielKolsi/persons.git
+
+After cloning / downloading from GitHub. Cd to the main folder.
 Execute the following commands:
 
 1) npm install
