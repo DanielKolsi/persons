@@ -1,0 +1,19 @@
+{
+  "name": "Persons",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Displays person data from a third party API.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "ecstatic": "^1.4.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
