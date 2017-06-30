@@ -7,7 +7,7 @@ var Properties = (function() {
 	module.names_emails_hash = new Object(); // for getting the correct email for sorted names list
 	module.selectedNames = []; // checkbox was checked on these names (rows)
 	module.numberOfSelectedNames = 0;
-	module.PERSONS_BODY = '#personsTable tbody';
+	module.PERSONS_BODY = "#personsTable tbody";
 	return module;
 }());
 
@@ -25,7 +25,7 @@ var OutputSelected = (function() {
 
 	module.output = function() {
 
-		var selectedNames = '';
+		var selectedNames = "";
 
 		for (var i in Properties.selectedNames) {
 
@@ -39,7 +39,7 @@ var OutputSelected = (function() {
 		if (Properties.numberOfSelectedNames > 0) {
 			alert(selectedNames);
 		} else {
-			alert('No names were selected.');
+			alert("No names were selected.");
 		}
 
 	};
@@ -58,7 +58,7 @@ var Get = (function() {
 
 		$.ajax({
 			url: Properties.API,
-			type: 'GET',
+			type: "GET",
 			dataType: "json",
 			success: this.processData,
 			error: this.error,
@@ -86,9 +86,14 @@ var Get = (function() {
 			var nameRow = '<tr class="name"><td style="text-align:center; background-color:#D9D9D9; border: none" rowspan = "2"><input id="' + idx +
 				'"type="checkbox" style="background-color: white" onclick="handleClick(this)" /></td><td style="text-align:left; background-color:#E9E9E9">' + name + '</td></tr>';
 			$(nameRow).appendTo(Properties.PERSONS_BODY);
-			var emailRow = '<tr class="email">' + '<td style="text-align:left; background-color:#FFFFFF">' + email + '</td>' + '</tr>';
+			var emailRow = "<tr class="
+			email ">" + "<td style="
+			text - align: left;
+			background - color: #FFFFFF ">" + email + "</td>" + "</tr>";
 			$(emailRow).appendTo(Properties.PERSONS_BODY);
-			var emptyRow = '<tr class="space"><td colspan="2"></td></tr>';
+			var emptyRow = "<tr class="
+			space "><td colspan="
+			2 "></td></tr>";
 			$(emptyRow).appendTo(Properties.PERSONS_BODY);
 		});
 	};
@@ -106,7 +111,7 @@ var Get = (function() {
 
 // if checkBox was checked, add corresponding name to the selectedNames array otherwise assign null to the array
 function handleClick(cb) {
-	$('.select').css({
+	$(".select").css({
 		fontSize: 18
 	});
 
@@ -118,8 +123,8 @@ function handleClick(cb) {
 		Properties.numberOfSelectedNames--;
 	}
 	if (Properties.numberOfSelectedNames > 0) {
-		$('.select').text('' + Properties.numberOfSelectedNames + ' of ' + Properties.names.length + ' selected');
+		$(".select").text("" + Properties.numberOfSelectedNames + " of " + Properties.names.length + " selected");
 	} else {
-		$('.select').text('');
+		$(".select").text("");
 	}
 }
