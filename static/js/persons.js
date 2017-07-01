@@ -91,9 +91,8 @@ var Get = (function() {
 			text - align: left;
 			background - color: #FFFFFF ">" + email + "</td>" + "</tr>";
 			$(emailRow).appendTo(Properties.PERSONS_BODY);
-			var emptyRow = "<tr class="
-			space "><td colspan="
-			2 "></td></tr>";
+
+			var emptyRow = "<tr class="space"><td colspan="2"></td></tr>";
 			$(emptyRow).appendTo(Properties.PERSONS_BODY);
 		});
 	};

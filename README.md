@@ -5,9 +5,9 @@ This app lists person data in an HTML table. It's implemented using Javascript a
 framework. JQuery is used for AJAX & manipulating HTML elements. CSS is used for styling.
 
 
-***************
-installation:
-***************
+*****************
+Installation instructions:
+*****************
 
 0) git clone https://github.com/DanielKolsi/persons.git
 
