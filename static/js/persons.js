@@ -18,41 +18,13 @@ var Properties = (function() {
 })();
 
 
-// output the selected names both in console & in alert dialog
-var OutputSelected = (function() {
-
-	var module = {};
-
-	module.output = function() {
-
-		var selectedNames = "";
-
-		for (var i = 0; i < Properties.selectedNames.length; i++) {
-
-			var name = Properties.selectedNames[i];
-
-			if (name != null && typeof name !== "undefined") {
-				console.log(name);
-				selectedNames = selectedNames + '\n' + name;
-			}
-		}
-		if (Properties.numberOfSelectedNames > 0) {
-			alert(selectedNames);
-		} else {
-			alert("No names were selected.");
-		}
-
-	};
-	return module;
-}());
-
 // REST Get for fetching data from the third party API
 var Get = (function() {
 
 	var module = {};
 
 	/*
-	AJAX function to fetch the data from the API (url)
+		AJAX function to fetch the data from the API (url)
 	*/
 	module.fetchPersonsBatch = function() {
 
@@ -61,7 +33,7 @@ var Get = (function() {
 			type: "GET",
 			dataType: "json",
 			success: this.processData,
-			error: this.error,
+			error: this.error
 		});
 	};
 
@@ -129,3 +101,31 @@ function handleClick(cb) {
 		$(".select").text("");
 	}
 }
+
+// output the selected names both in console & in an alert dialog
+var OutputSelected = (function() {
+
+	var module = {};
+
+	module.output = function() {
+
+		var selectedNames = "";
+
+		for (var i = 0; i < Properties.selectedNames.length; i++) {
+
+			var name = Properties.selectedNames[i];
+
+			if (name != null && typeof name !== "undefined") {
+				console.log(name);
+				selectedNames = selectedNames + '\n' + name;
+			}
+		}
+		if (Properties.numberOfSelectedNames > 0) {
+			alert(selectedNames);
+		} else {
+			alert("No names were selected.");
+		}
+
+	};
+	return module;
+}());

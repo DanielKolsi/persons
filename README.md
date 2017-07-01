@@ -16,7 +16,9 @@ Execute the following commands:
 
 1) npm install
 2) npm start
-3) Surf your browser to: http://127.0.0.1/3000
+3) Surf your browser to: http://127.0.0.1/3000  (**)
+    Port 3000 is used unless there exists a preconfigured port (e.g. in Heroku environment,
+    process.env.port is used)
 
 ***************
 Assumptions & notes
