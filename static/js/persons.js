@@ -66,6 +66,11 @@ var Get = (function() {
 	};
 
 
+	/* Processes the fetched JSON data.
+		 Creates arrays of names and emails in Properties and sorts the names in ASC alpha order.
+		 Creates names_email_hash to keep track of (name, email) pairs after sorting.
+		 Further outputs the data to the web page by adding names and email rows to the HTML table.
+	*/
 	module.processData = function(data) {
 
 		$.each(data, function(idx) {
@@ -89,13 +94,11 @@ var Get = (function() {
 			var emailRow = '<tr class="email">' + '<td style="text-align:left; background-color:#FFFFFF">' + email + '</td>' + '</tr>';
 			$(emailRow).appendTo(Properties.PERSONS_BODY);
 			var emptyRow = '<tr class="space"><td colspan="2"></td></tr>';
-
-
-
 			$(emptyRow).appendTo(Properties.PERSONS_BODY);
 		});
 	};
 
+	// alert on errors in async AJAX data retrieving
 	module.error = function(jqXHR, exception) {
 		if (jqXHR.status && jqXHR.status == 400) {
 			alert(jqXHR.responseText);
@@ -117,11 +120,11 @@ function handleClick(cb) {
 		Properties.selectedNames[cb.id] = Properties.names[cb.id];
 		Properties.numberOfSelectedNames++;
 	} else {
-		Properties.selectedNames[cb.id] = null; // remove the element from the array
+		Properties.selectedNames[cb.id] = null; // essentially remove the element from the array
 		Properties.numberOfSelectedNames--;
 	}
-	if (Properties.numberOfSelectedNames > 0) {
-		$(".select").text("" + Properties.numberOfSelectedNames + " of " + Properties.names.length + " selected");
+	if (Properties.numberOfSelectedNames > 0) { // if no names were selected, don't display 'X of Y selected' text
+ 		$(".select").text("" + Properties.numberOfSelectedNames + " of " + Properties.names.length + " selected");
 	} else {
 		$(".select").text("");
 	}
