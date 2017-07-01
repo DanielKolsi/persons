@@ -86,10 +86,7 @@ var Get = (function() {
 			var nameRow = '<tr class="name"><td style="text-align:center; background-color:#D9D9D9; border: none" rowspan = "2"><input id="' + idx +
 				'"type="checkbox" style="background-color: white" onclick="handleClick(this)" /></td><td style="text-align:left; background-color:#E9E9E9">' + name + '</td></tr>';
 			$(nameRow).appendTo(Properties.PERSONS_BODY);
-			var emailRow = "<tr class="
-			email ">" + "<td style="
-			text - align: left;
-			background - color: #FFFFFF ">" + email + "</td>" + "</tr>";
+			var emailRow = "<tr class="email ">" + "<td style="text - align: left;background - color: #FFFFFF ">" + email + "</td>" + "</tr>";
 			$(emailRow).appendTo(Properties.PERSONS_BODY);
 
 			var emptyRow = "<tr class="space"><td colspan="2"></td></tr>";
