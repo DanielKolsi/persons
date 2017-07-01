@@ -18,21 +18,23 @@ td:nth-child(odd) {
 			padding-bottom: 20px
 }
 
-tr.name td {
+tr.name, tr.name td {
 			border-style: solid;
-			border-color: #CACACA #CACACA #FFFFFF #D9D9D9;
+			border-color: #CACACA #CACACA #E9E9E9;
 }
 
-tr.email td {
+tr.email, tr.email td {
 
 			border-style: solid;
-
-			border-color: #FFFFFF #CACACA #CACACA #D9D9D9;
+			border-color: #FFFFFF #CACACA #CACACA;
 }
+
+
 
 tr.space, tr.space td {
 
 			height: 7px;
 			padding: 0;
 			background-color: #ffffff;
+			border: none;
 }
