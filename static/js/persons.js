@@ -4,7 +4,7 @@ var Properties = (function() {
 	module.API = "https://jsonplaceholder.typicode.com/users"; // API URL for fetching the JSON user data
 	module.names = [];
 	module.emails = [];
-	module.names_emails_hash = new Object(); // for getting the correct email for sorted names list
+	module.names_emails_hash = {}; // for getting the correct email for sorted names list
 	module.selectedNames = []; // checkbox was checked on these names (rows)
 	module.numberOfSelectedNames = 0;
 	module.PERSONS_BODY = "#personsTable tbody";
@@ -27,7 +27,7 @@ var OutputSelected = (function() {
 
 		var selectedNames = "";
 
-		for (var i in Properties.selectedNames) {
+		for (var i = 0; i < Properties.selectedNames.length; i++) {
 
 			var name = Properties.selectedNames[i];
 
@@ -124,7 +124,7 @@ function handleClick(cb) {
 		Properties.numberOfSelectedNames--;
 	}
 	if (Properties.numberOfSelectedNames > 0) { // if no names were selected, don't display 'X of Y selected' text
- 		$(".select").text("" + Properties.numberOfSelectedNames + " of " + Properties.names.length + " selected");
+		$(".select").text("" + Properties.numberOfSelectedNames + " of " + Properties.names.length + " selected");
 	} else {
 		$(".select").text("");
 	}

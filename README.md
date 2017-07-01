@@ -19,11 +19,12 @@ Execute the following commands:
 3) Surf your browser to: http://127.0.0.1/3000
 
 ***************
-Assumptions
+Assumptions & notes
 ***************
 As this was a quick test asked to be returned the next day, unit & functional tests were
-omitted. Also due to the time restrictions, there are some small differences (e.g. checkbutton
-color & font families) between the sketch and the implementation.
+omitted. Also due to the time restrictions and depending on browser interpretation of CSS, there
+are some small differences (e.g. checkbutton color & font families) between the sketch and how
+the implemented UI looks like.
 
 Also, the code contains some 'hard coded' values which could be outsourced to a separate config
 file if there were more time.
