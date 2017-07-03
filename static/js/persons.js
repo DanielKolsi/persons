@@ -1,7 +1,7 @@
 // global properties
 var Properties = (function() {
 	var module = {};
-	module.API = "https://jsonplaceholder.typicode.com/users"; // API URL for fetching the JSON user data (in case of sensitive data, the fetch should be done server side)
+	module.API = "http://127.0.0.1:3000/api/"; // API URL for fetching the JSON user data (in case of sensitive data, the fetch should be done server side)
 	module.names = [];
 	module.emails = [];
 	module.names_emails_hash = {}; // for getting the correct email for sorted names list
@@ -76,7 +76,7 @@ var Get = (function() {
 		if (jqXHR.status && jqXHR.status == 400) {
 			alert(jqXHR.responseText);
 		} else {
-			alert("Error while fetching JSON data.");
+			alert("Error while fetching JSON data, " + jqXHR.responseText);
 		}
 	};
 	return module;

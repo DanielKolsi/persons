@@ -6,10 +6,12 @@ var port = process.env.PORT || 3000;
 
 http.createServer(function (req, res) {
 
-    // default: handle the server request as a static file
-    serveStaticFiles(req, res);
 
+    if (req.url.indexOf('/api') === 0) {
+      return require('./api/http-get')(req, res);
+    }
 
+    serveStaticFiles(req, res);    // default: handle the server request as a static file
 
 }).listen(port);
 
