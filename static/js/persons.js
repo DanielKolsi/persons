@@ -1,7 +1,7 @@
 // global properties
 var Properties = (function() {
 	var module = {};
-	module.API = "https://jsonplaceholder.typicode.com/users"; // API URL for fetching the JSON user data
+	module.API = "https://jsonplaceholder.typicode.com/users"; // API URL for fetching the JSON user data (in case of sensitive data, the fetch should be done server side)
 	module.names = [];
 	module.emails = [];
 	module.names_emails_hash = {}; // for getting the correct email for sorted names list
@@ -25,6 +25,7 @@ var Get = (function() {
 
 	/*
 		AJAX function to fetch the data from the API (url)
+		In case of sensitive data, the fetch should be done server side without revealing the URL.
 	*/
 	module.fetchPersonsBatch = function() {
 

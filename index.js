@@ -8,6 +8,9 @@ http.createServer(function (req, res) {
 
     // default: handle the server request as a static file
     serveStaticFiles(req, res);
+
+
+
 }).listen(port);
 
 console.log('Listening on http://localhost:%d', port);
